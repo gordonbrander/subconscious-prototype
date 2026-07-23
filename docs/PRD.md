@@ -22,17 +22,20 @@ Memory is the critical bit. Open source models have been rapidly commodifying th
 
 ## Goals
 
-- P1: A personal agent that augments the user's thinking and grows with them over a lifetime.
-- P1: User-owned memory
-  - The full record of context, notes, and conversations belongs to the user.
-- P1: Credible exit
-  - At minimum, a complete owned copy of all data, ideally private and encrypted.
-- P1: Your Subconscious is a tool for thought.
-  - We're desigining an agent for the _opposite_ of AI deskilling. Subconscious makes you smarter.
+- A personal agent that augments the user's thinking and grows with them over a lifetime.
+- User-owned memory
+  - Saves every memory, every message, every note, every bit of plugin data.
+  - At minimum, an exportable copy of all data for credible exit.
+  - Ideally private and encrypted.
+- Subconscious is a tool for thought
   - Pre-GPT apps like Obsidian were TfT 1.0. We're building TfT 2.0.
-  - Built-in LLM wiki.
+  - An agent designed to do the _opposite_ of AI deskilling. Subconscious makes you smarter.
   - Subconscious expands your OODA loop, and is especially focused on **orientation**.
+  - Built-in LLM wiki.
   - Daily Rituals. Subconscious is a [ritual technology](https://newsletter.squishy.computer/p/ritual-technology). Daily review helps you craft personal feedback loops that let you learn faster, generate new thoughts, make new breakthroughs, and tackle more ambitious problems.
+- Lasts a lifetime
+  - Data can outlive any company.
+  - Export lets it even outlive the software.
 
 ### Non-goals
 
@@ -57,7 +60,22 @@ Memory is the critical bit. Open source models have been rapidly commodifying th
 - P3: Post to Bluesky
 
 ## User Experience
-<!-- Key flows, wireframes, or screen-by-screen walkthrough. -->
+
+### Concepts
+
+- **LLM wiki**
+  - Notes are serializable as Markdown with frontmatter
+  - **Note flavors**
+    - Notes: user-generated notes
+    - Dreams: AI-generated notes
+    - Agents: specially tagged note, interpreted as a template for a subagent
+    - Skills: specially tagged note, loaded into agent harness as a skill
+    - Transform any kind of note into any other: dreams to note, note into agent, dream to skill, etc.
+- **Agents**
+  - **Day agent**: your main agent that you converse with
+  - **Night agents**: agents that work while you sleep
+- Inputs: adaptors that feed data into the system
+- Outputs: send an email, post to Telegram
 
 ## Technical specs
 
