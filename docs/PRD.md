@@ -48,34 +48,57 @@ Memory is the critical bit. Open source models have been rapidly commodifying th
 
 ## Requirements
 
-- P1: LLM wiki
-  - Versioned
-  - JSON-compatible data model
-  - Serializable as Markdown with Frontmatter.
-  - Path-addressable
-- P1: Import/export Obsidian Vault
-  - P2: Bi-directional Sync with Obsidian Vault
-- P2: Decentralize your memory vault
-- P3: Multiplayer
-- P3: Post to Bluesky
-
-## User Experience
-
-### Concepts
-
-- **LLM wiki**
-  - Notes are serializable as Markdown with frontmatter
-  - **Note flavors**
+- (P1) **Conversations**
+  - (P1) **Messages**
+- (P1) **LLM wiki**
+  - (P1) **Notes**
     - Notes: user-generated notes
     - Dreams: AI-generated notes
     - Agents: specially tagged note, interpreted as a template for a subagent
     - Skills: specially tagged note, loaded into agent harness as a skill
-    - Transform any kind of note into any other: dreams to note, note into agent, dream to skill, etc.
-- **Agents**
-  - **Day agent**: your main agent that you converse with
-  - **Night agents**: agents that work while you sleep
-- Inputs: adaptors that feed data into the system
-- Outputs: send an email, post to Telegram
+    - Config: configuration stored as note(s)
+    - Subscriptions: stored as note(s)
+    - Transform any note into any other kind of note. Dream to note, note to agent, dream to skill, etc.
+  - (P1) **Wiki versioning**
+    - (P1) Multiple editors / conflict resolution
+    - (P3) real-time collaborative text editing
+  - (P1) Path-addressable
+  - (P1) Structured data
+    - JSON-compatible
+    - Serializable as Markdown with frontmatter
+- **Agents** (spawned from agent notes)
+  - **Day agent**: agents that you converse with
+  - **Night agents**: agents that work while you sleep (event-driven)
+- **Harness**
+  - (P1) Auto-compaction
+  - (P1) Letta-style memory blocks
+- **Tools**
+  - (P1) Edit note
+  - (P1) Search notes
+  - (P1) Search messages
+  - (P1) Search web
+- **Event system**
+  - (P2): event sourced architecture
+  - (P1) Path-based event subscriptions
+  - (P1) Subscribe to wiki edits
+  - (P1) event cascade control: `correlation_id`, `causation_id`, `depth`, token stats, etc for limiting runaway event cascades
+- **Inputs**
+  - Subscribe to RSS feed
+  - Send email
+- **Outputs**
+  - Send an email
+  - Post to Telegram
+- **Import/export**
+  - (P1) Export Markdown with frontmatter
+  - (P1) Import/export Obsidian Vault
+    - (P2): Bi-directional Sync with Obsidian Vault
+- **Sync**
+  - (P1): Sync memory vault copies across your devices
+  - (P3): Decentralize memory vault
+- (P3) **Multiplayer**
+  - (P3): Post to Bluesky
+
+## User Experience
 
 ## Technical specs
 
