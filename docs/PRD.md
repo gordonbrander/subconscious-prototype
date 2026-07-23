@@ -16,9 +16,9 @@ We need an **AI Subconscious**: a truly personal agent that thinks with you, and
 
 ## Solution
 
-Imagine a personal agent that remembers every interaction you have had together, it saves every conversation, every memory, every note that you've taken. This lifetime of context is your digital shadow, your [exoself](https://kevinkelly.substack.com/p/quiet-my-exoself), your **Subconscious**. It belongs to you. Your Subconscious is stored in a decentralized, and end-to-end encrypted vault that you control.
+Imagine a personal agent that remembers every interaction you have had together, it saves every conversation, every memory, every note that you've taken. This lifetime of AI memory is your digital shadow, your [exoself](https://kevinkelly.substack.com/p/quiet-my-exoself), your **Subconscious**. It belongs to you. Your Subconscious is stored in a decentralized, and end-to-end encrypted vault that you control.
 
-The critical component is memory. We want a person to own the entire record of their thinking-with-AI: private and encrypted where feasible, and — at minimum — a fully owned copy that guarantees *credible exit*.
+Memory is the critical bit. Up until this date, open source models have rapidly commodified the frontier (ETA ~3mo as of 2026) and denied any one lab pricing power. The one wrinkle in this story is memory: if you accumulate all your memory in ChatGPT, you can't switch. Therefore: who owns your memory owns your future. But what if we intercept every message, every memory, every bit of context, and save a copy?  Now we have *[credible exit](https://newsletter.squishy.computer/p/credible-exit)*. So, we want a harness that stores a lifetime of AI memory in a user-owned vault, private and encrypted where feasible, or, at minimum, fully exportable.
 
 ## Goals
 
@@ -27,8 +27,10 @@ The critical component is memory. We want a person to own the entire record of t
   - The full record of context, notes, and conversations belongs to the user.
 - P1: Credible exit
   - At minimum, a complete owned copy of all data, ideally private and encrypted.
-- P1: Your Subconscious makes you smarter.
-  - We're desigining an agent for the _opposite_ of AI deskilling.
+- P1: Your Subconscious is a tool for thought.
+  - We're desigining an agent for the _opposite_ of AI deskilling. Subconscious makes you smarter.
+  - Pre-GPT apps like Obsidian were TfT 1.0. We're building TfT 2.0.
+  - Built-in LLM wiki.
   - Subconscious expands your OODA loop, and is especially focused on **orientation**.
   - Daily Rituals. Subconscious is a [ritual technology](https://newsletter.squishy.computer/p/ritual-technology). Daily review helps you craft personal feedback loops that let you learn faster, generate new thoughts, make new breakthroughs, and tackle more ambitious problems.
 
