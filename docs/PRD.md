@@ -12,7 +12,7 @@ AI already outperforms humans in many activities, and its capabilities are rapid
 
 The AI people rely on today belong to corporations. Your memory, your context, your conversations, the accumulated model of how you think—your extended mind—belong to someone else. There goes your alpha.
 
-We need an **AI Subconscious**: a personal agent with a memory store that you own.
+We need an **AI Subconscious**: a truly personal agent that thinks with you, and can store a lifetime of memory in a vault that you own.
 
 ## Solution
 
