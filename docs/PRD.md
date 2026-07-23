@@ -22,16 +22,36 @@ The critical component is memory. We want a person to own the entire record of t
 
 ## Goals
 
-- A personal agent that augments the user's thinking and grows with them over a lifetime.
-- User-owned memory: the full record of context, notes, and conversations belongs to the user.
-- Credible exit: at minimum, a complete owned copy of all data, ideally private and encrypted.
+- P1: A personal agent that augments the user's thinking and grows with them over a lifetime.
+- P1: User-owned memory
+  - The full record of context, notes, and conversations belongs to the user.
+- P1: Credible exit
+  - At minimum, a complete owned copy of all data, ideally private and encrypted.
+- P1: Your Subconscious makes you smarter.
+  - We're desigining an agent for the _opposite_ of AI deskilling.
+  - Subconscious expands your OODA loop, and is especially focused on **orientation**.
+  - Daily Rituals. Subconscious is a [ritual technology](https://newsletter.squishy.computer/p/ritual-technology). Daily review helps you craft personal feedback loops that let you learn faster, generate new thoughts, make new breakthroughs, and tackle more ambitious problems.
 
 ### Non-goals
+
+- Storing data as files
+- P2P or "full" decentralization: Decentralization is hard. Our primary goal is credible exit through user-owned data. CAL grants both source code and access to personal data, preventing lock-in. This is sufficient for our goals. 
 
 ## Users and use-cases
 <!-- Who uses this? Primary personas and their key jobs-to-be-done. -->
 
 ## Requirements
+
+- P1: LLM wiki
+  - Versioned
+  - JSON-compatible data model
+  - Serializable as Markdown with Frontmatter.
+  - Path-addressable
+- P1: Import/export Obsidian Vault
+  - P2: Bi-directional Sync with Obsidian Vault
+- P2: Decentralize your memory vault
+- P3: Multiplayer
+- P3: Post to Bluesky
 
 ## User Experience
 <!-- Key flows, wireframes, or screen-by-screen walkthrough. -->
