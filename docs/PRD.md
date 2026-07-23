@@ -48,8 +48,12 @@ Memory is the critical bit. Open source models have been rapidly commodifying th
 
 ## Requirements
 
-- (P1) **Conversations**
+- (P1) **Chat**
   - (P1) **Messages**
+  - (P1) Plain-text search across messages
+  - (P2) Chat widgets
+    - Table view
+    - Mermaid diagrams
 - (P1) **LLM wiki**
   - (P1) **Notes**
     - Notes: user-generated notes
@@ -62,16 +66,27 @@ Memory is the critical bit. Open source models have been rapidly commodifying th
   - (P1) **Wiki versioning**
     - (P1) Multiple editors / conflict resolution
     - (P3) real-time collaborative text editing
-  - (P1) Path-addressable
-  - (P1) Structured data
+  - (P1) **Path-addressable**
+    - Notes addressable by rev (hash address for revision), globally-unique ID, or path. Think identifier vs locator.
+  - (P1) **Structured data**
     - JSON-compatible
     - Serializable as Markdown with frontmatter
+  - (P1) **Markdown content**
+    - Support subset of Obsidian-flavored Markdown
+    - Wikilinks: use Obsidian resolution algorithm.
+    - Block references: use Obsidian-style.
+  - (P1) Quick capture
+  - (P1) Plain-text search
 - **Agents** (spawned from agent notes)
   - **Day agent**: agents that you converse with
   - **Night agents**: agents that work while you sleep (event-driven)
 - **Harness**
+  - (P1) Swap LLM providers
   - (P1) Auto-compaction
-  - (P1) Letta-style memory blocks
+  - (P1) Memory blocks (Letta-style)
+  - (P1) Cache-efficient context injection
+  - (P1) Skills
+    - Use hyperlinks/wikilinks for progressive disclosure, rather than folder-based discovery.
 - **Tools**
   - (P1) Edit note
   - (P1) Search notes
