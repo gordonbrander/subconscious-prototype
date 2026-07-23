@@ -4,6 +4,8 @@ Status: Draft
 
 ## Overview
 
+(TLDR)
+
 ## Problem
 
 AI already outperforms humans in many activities, and its capabilities are rapidly expanding. Soon, most economically-valuable knowledge work will be done entirely by AI. To survive and compete in the AI information economy, we need to augment our intellect with AI.
@@ -12,16 +14,17 @@ The AI people rely on today belong to corporations. Your memory, your context, y
 
 We need an **AI Subconscious**: a personal agent with a memory store that you own.
 
-## Product
+## Solution
 
 Imagine a personal agent that remembers every interaction you have had together, it saves every conversation, every memory, every note that you've taken. This lifetime of context is your digital shadow, your [exoself](https://kevinkelly.substack.com/p/quiet-my-exoself), your **Subconscious**. It belongs to you. Your Subconscious is stored in a decentralized, and end-to-end encrypted vault that you control.
 
 The critical component is memory. We want a person to own the entire record of their thinking-with-AI: private and encrypted where feasible, and — at minimum — a fully owned copy that guarantees *credible exit*.
 
 ## Goals
+
 - A personal agent that augments the user's thinking and grows with them over a lifetime.
 - User-owned memory: the full record of context, notes, and conversations belongs to the user.
-- Credible exit: at minimum, a complete owned copy of all data; ideally private and encrypted.
+- Credible exit: at minimum, a complete owned copy of all data, ideally private and encrypted.
 
 ### Non-goals
 
@@ -29,12 +32,6 @@ The critical component is memory. We want a person to own the entire record of t
 <!-- Who uses this? Primary personas and their key jobs-to-be-done. -->
 
 ## Requirements
-### Functional
--
-
-### Non-Functional
-<!-- Performance, reliability, security, privacy, accessibility. Memory ownership, encryption, and portability live here. -->
--
 
 ## User Experience
 <!-- Key flows, wireframes, or screen-by-screen walkthrough. -->
