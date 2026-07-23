@@ -44,7 +44,7 @@ The critical component is memory. We want a person to own the entire record of t
 ## Milestones & Scope
 <!-- Phasing: what ships first (MVP) vs. later. -->
 
-## Open Questions
+## FAQ
 
 ### Why now?
 
