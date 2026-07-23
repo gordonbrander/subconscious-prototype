@@ -56,11 +56,11 @@ We tried building this as a startup back before GPT was a thing. Unfortunately, 
 - Agents: any LLM provider. Abstraction layers like Vercel AI SDK let us swap between providers, or even use local models.
 - User-owned data: CAL license and/or a decentralizable data storage layer like DialogDB or Automerge.
 - User-owned keys and rotation: use ATProto's did:plc.
-- Decentralization and sync: use DialogDB, Automerge, or clone CouchDB's algorithm on top of SQLite.
+- Sync: use DialogDB, Automerge, or clone CouchDB's algorithm on top of SQLite.
 
-What remains is product design.
+What remains? Mostly product design.
 
-Furthermore, Fable and equivalent coding models push software into post-scarcity. We no longer need to build a startup to make this happen. We can vibe-code Subconscious using our excess tokens and release the whole thing Open Source. The CAL license bakes in user data ownership, providing further safeguards ensuring your memories are yours forever.
+Furthermore, the existence of Fable-class models pushes software into post-scarcity. We no longer need to build a startup to make this happen. We can vibe-code Subconscious using our excess tokens and release the whole thing Open Source. The CAL license bakes in user data ownership, so your Subconscious is yours forever.
 
 ## Appendix
 <!-- Links, references, prior art: Engelbart (augmenting human intellect), Alan Kay (Dynabook), the "exoself" concept. -->
