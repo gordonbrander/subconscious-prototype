@@ -35,6 +35,7 @@ The critical component is memory. We want a person to own the entire record of t
 ### Non-goals
 
 - Storing data as files
+- Reinventing markup. Markdown is good enough.
 - P2P or "full" decentralization: Decentralization is hard. Our primary goal is credible exit through user-owned data. CAL grants both source code and access to personal data, preventing lock-in. This is sufficient for our goals. 
 
 ## Users and use-cases
