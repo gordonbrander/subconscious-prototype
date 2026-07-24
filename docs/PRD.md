@@ -152,6 +152,7 @@ Memory is the critical bit. Open source models have been rapidly commodifying th
     - Agents have a **sendEvent** tool
   - Tradeoffs
     - Actor-like fits nicely with `@mentioning` agents
+      - What about fanout? Could have fanout agents that are just scripts
     - Actor model can (and probably should) still be built on top of event sourcing
 
 ## Success Metrics
