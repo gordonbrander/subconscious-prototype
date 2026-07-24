@@ -117,6 +117,43 @@ Memory is the critical bit. Open source models have been rapidly commodifying th
 
 ## Technical specs
 
+### Tech stack
+
+- Language: Typescript
+  - Rust components?
+- Runtime: Node
+- Bundler: Vite or ESBuild?
+- DB: SQLite or [DialogDB](https://github.com/dialog-db/dialog-db)
+
+### Architecture
+
+- Event sourced?
+  - Pro: good foundation for a building a record of everything your agent has done
+  - Probably should track causality (automatically assign `prev` ID to event based on current HEAD at write time). Would allow merging separate event logs and having a deterministic conflict resolution mechanism for replay.
+- Event system design
+  - Actor-like?
+    - Agents have an **address**
+    - Agents have a **sendToAgent** tool that takes address
+        - Tool automatically tracks `correlationId`, `causationId`, `depth`
+    - Agents have a **spawnAgent** tool
+        - Takes a template
+        - Records address, adds to their context automatically
+        - `{ to: string, replyTo?: string, message, data: Record<string, unknown> }`
+            - Automatically expanded to `{ id, type, from, to, replyTo, message, data, time, correlationId, causationId, depth }` with publish tool expanding metadata and threading causality.
+        - Subagents only live as long as their session
+            - Can be sent steering messages to kill
+    - Agent frontmatter can be configured with addresses to dial
+    - Name system for agents?
+        - Name -> Address
+        - Local human-readable names (DNS-like)
+        - Globally-unique addresses (UUID or similar)
+  - Bus-like
+    - Agents listen to events and commands on a shared bus
+    - Agents have a **sendEvent** tool
+  - Tradeoffs
+    - Actor-like fits nicely with `@mentioning` agents
+    - Actor model can (and probably should) still be built on top of event sourcing
+
 ## Success Metrics
 <!-- How we'll know it's working. -->
 
