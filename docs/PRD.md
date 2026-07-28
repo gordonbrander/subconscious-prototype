@@ -103,6 +103,9 @@ Memory is the critical bit. Open source models have been rapidly commodifying th
 - **Outputs**
   - Send an email
   - Post to Telegram
+- **Workflows**
+  - Queue with workflow attached
+- **Cron jobs**
 - **Import/export**
   - (P1) Export Markdown with frontmatter
   - (P1) Import/export Obsidian Vault
@@ -127,33 +130,57 @@ Memory is the critical bit. Open source models have been rapidly commodifying th
 
 ### Architecture
 
-- Event sourced?
-  - Pro: good foundation for a building a record of everything your agent has done
-  - Probably should track causality (automatically assign `prev` ID to event based on current HEAD at write time). Would allow merging separate event logs and having a deterministic conflict resolution mechanism for replay.
-- Event system design
-  - Actor-like?
-    - Agents have an **address**
-    - Agents have a **sendToAgent** tool that takes address
-        - Tool automatically tracks `correlationId`, `causationId`, `depth`
-    - Agents have a **spawnAgent** tool
-        - Takes a template
-        - Records address, adds to their context automatically
-        - `{ to: string, replyTo?: string, message, data: Record<string, unknown> }`
-            - Automatically expanded to `{ id, type, from, to, replyTo, message, data, time, correlationId, causationId, depth }` with publish tool expanding metadata and threading causality.
-        - Subagents only live as long as their session
-            - Can be sent steering messages to kill
-    - Agent frontmatter can be configured with addresses to dial
-    - Name system for agents?
-        - Name -> Address
-        - Local human-readable names (DNS-like)
-        - Globally-unique addresses (UUID or similar)
-  - Bus-like
-    - Agents listen to events and commands on a shared bus
-    - Agents have a **sendEvent** tool
-  - Tradeoffs
-    - Actor-like fits nicely with `@mentioning` agents
-      - What about fanout? Could have fanout agents that are just scripts
-    - Actor model can (and probably should) still be built on top of event sourcing
+- Event sourced
+  - Pro: Event log allows agents to recover from failure by looking back at log
+  - Pro: easy to build multiple projections/UIs on top
+  - Track causality (automatically assign `prev` ID to event based on current HEAD at write time).
+    - Allows deterministic conflict resolution when merging event logs
+  - **Commands** (unicast requests / "please do x") and **events** (multicast facts / "x happend")
+- Agents as actors
+  - Actor-like system built on top of event sourced log
+    - Messages are a type of command
+  - Agents have an **address**
+  - Agents have a **sendToAgent** tool that takes address
+      - Tool automatically tracks `correlationId`, `causationId`, `depth`
+  - Agents have a **spawnAgent** tool
+      - Takes a template
+      - Records address, adds to their context automatically
+      - `{ to: string, replyTo?: string, message, data: Record<string, unknown> }`
+          - Automatically expanded to `{ id, type, from, to, replyTo, message, data, time, correlationId, causationId, depth }` with publish tool expanding metadata and threading causality.
+      - Subagents only live as long as their session
+          - Can be sent steering messages to kill
+  - Name system: Name -> Address
+    - E.g. `@subsconscious -> abc123xyz...`
+    - Local human-readable names (DNS-like)
+    - Globally-unique addresses (UUID or similar)
+    - Agent frontmatter can be configured with well-known addresses
+
+### Event-sourcing
+
+`events` table as Typescript schema:
+
+```typescript
+type Event = {
+  id: string; // ULID
+  prev?: string; // ULID
+  kind: "command" | "event";
+  type: string;
+  from: string; // Address
+  to?: string; // Address
+  replyTo?: string; // Address
+  message: string; // Human-friendly message
+  data: Record<string, unknown>; // Structured data
+  correlationId: string; // ULID
+  causationId: string; // ULID
+  depth: number; // Cycle detection. Always incremented by 1.
+}
+```
+
+Notes:
+- Log both commands and events
+- Fat events: state must be derivable from event log
+- ID: ULID or UUID v7?
+  - Prefer UUID v7. Native support in Postgres 18.
 
 ## Success Metrics
 <!-- How we'll know it's working. -->
