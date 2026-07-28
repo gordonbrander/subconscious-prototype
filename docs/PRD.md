@@ -118,6 +118,31 @@ Memory is the critical bit. Open source models have been rapidly commodifying th
 
 ## User Experience
 
+Reflection:
+- Goal: close feedback loop with user
+- **Dreams** are surfaced
+  - Once per day?
+  - Dreams types
+    - AI-generated notes
+    - Updates (e.g. OTD resurfaced notes)
+    - Prompts to user (e.g. multiple choice, or text input)
+  - **Set an intention**: influence what shows up next time by setting an intention
+  - **1-3 questions**
+- Swipe through dreams
+  - e.g. Tinder swipe or other yes/no signal 
+    - Choices + intention shuffle in new dreams
+  - Save dream -> note
+  - Add dream to your "hand"
+- Hand
+  - Generate a new dream from the contents of your hand
+
+Quick capture:
+- Goal: capture as fast as possible, organize later
+- Write note (could just use AI input field)
+  - Title optional (either generated or not required)
+  - Autotag?
+- Capture URL
+
 ## Technical specs
 
 ### Tech stack
