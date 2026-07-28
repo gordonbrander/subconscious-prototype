@@ -153,6 +153,9 @@ Quick capture:
 - Bundler: Vite or ESBuild?
 - DB: SQLite or [DialogDB](https://github.com/dialog-db/dialog-db)
 
+Prototype approach:
+- Pi plugin
+
 ### Architecture
 
 - Event sourced
