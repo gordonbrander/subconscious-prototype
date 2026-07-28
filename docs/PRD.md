@@ -140,7 +140,7 @@ Memory is the critical bit. Open source models have been rapidly commodifying th
   - Actor-like system built on top of event sourced log
     - Messages are a type of command
   - Agents have an **address**
-  - Agents have a **sendToAgent** tool that takes address
+  - Agents have a **sendMessage** tool that takes an address
       - Tool automatically tracks `correlationId`, `causationId`, `depth`
   - Agents have a **spawnAgent** tool
       - Takes a template
@@ -181,6 +181,31 @@ Notes:
 - Fat events: state must be derivable from event log
 - ID: ULID or UUID v7?
   - Prefer UUID v7. Native support in Postgres 18.
+- Causality data automatically threaded by the system (not the agent
+  - Agent `sendMessage` tool bound to thread `{ cause: event }` through
+
+### LLM wiki
+
+Assuming a CouchDB-shaped record (vs DialogDB)...
+
+```typescript
+type Doc = {
+  _id: string; // UUID. Globally-unique reference.
+  _rev: string; // CouchDB-style rev.
+  _schema: string; // URI e.g. `urn:subconscious:schema:g:agent/v1`
+  _path: string; // path string "foo/bar/baz". Locally unique address
+  title?: string;
+  content: string;
+  [key: string]: unknown; // Arbitrary other properties
+}
+```
+
+Notes:
+- Must serialize to Markdown with frontmatter. Content is body. Everything else is frontmatter.
+
+Open questions:
+- Are paths better handled via name system (e.g. petnames)?
+  - If so, `_path` could be interpreted as "preferred path"
 
 ## Success Metrics
 <!-- How we'll know it's working. -->
