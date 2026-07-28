@@ -1,4 +1,4 @@
-# Product Requirements Document — Subconscious Prototype
+# PRD: Subconscious Prototype
 
 Status: Draft
 
