@@ -193,6 +193,7 @@ A **tour** is a dream type: a generated narrative walk through notes you already
 
 Reflection (home view):
 - Goal: close feedback loop with user
+- JTBD: When I've been accumulating notes and conversations faster than I can make sense of them, I want to be shown what my Subconscious noticed—one dream at a time, in my own words—so I can react to each one and teach it what's worth noticing next.
 - **Dreams** are surfaced
   - Once per day?
   - Dreams types
@@ -211,16 +212,19 @@ Reflection (home view):
 
 Synthesize:
 - Goal: explore adjacent possible, combinatorial innovation
+- JTBD: When I've gathered a few notes that feel related but I can't articulate the connection, I want to hand them to my Subconscious and have it generate something new out of the combination, so I can find the idea sitting between them.
 - Generate new dream from contents of your hand
 
 Conversation:
 - Goal: talk with your Subconscious
+- JTBD: When I'm chasing a thought that only makes sense against everything I've already written, I want to talk it through with an agent that has read all of it, so I can reach an answer grounded in my own material instead of starting from scratch.
 - Conversation grounded in notes
 - Generate TLDRs, summaries, and reports
 - Steer night agents
 
 Quick capture:
 - Goal: capture as fast as possible, organize later
+- JTBD: When a thought arrives while I'm in the middle of something else, I want to get it into the vault in seconds without titling or filing it, so I can keep my attention on what I was doing and trust that it will be organized later.
 - Write note (could just use AI input field)
   - Title optional (either generated or not required)
   - Autotag?
