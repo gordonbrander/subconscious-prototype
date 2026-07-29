@@ -2,7 +2,7 @@
 
 Status: Draft
 
-Companion to [PRD.md](./PRD.md). Five personas, ordered by how well Milestone 1 serves them.
+Companion to [PRD.md](./PRD.md). Six personas, ordered by how well Milestone 1 serves them.
 
 ## Marcus — 27, 4th-year PhD student (cognitive science)
 
@@ -31,6 +31,20 @@ Companion to [PRD.md](./PRD.md). Five personas, ordered by how well Milestone 1 
 **Wants:** a morning brief before standup. "You concluded the opposite of this in April—here's the note." Lens re-runs on standing questions.
 
 **Quits if:** setup takes more than 10 minutes, or review is a terminal/vim thing. Needs mobile. Milestone 2, not Milestone 1.
+
+## Maya — 38, illustrator and printmaker
+
+**Setup:** iPad Pro for drawing, an aging MacBook Air used mostly for invoices and print files, iPhone always in hand. A paper notebook for morning pages. A camera roll with 400 screenshots, fabric swatches, and half-legible poems. Squarespace shop, Instagram, part-time teaching at an art college. Freelance editorial work pays the rent unevenly.
+
+**Day:** morning pages first thing—three pages longhand, six years on and off. Studio in the afternoon if teaching allows. Ideas arrive on walks and in the shower and are lost within the hour.
+
+**Pain:** the pages are a dumping ground she never rereads, by design—Cameron's rule. So the obsessions inside them are invisible to her. She knows there are four years of recurring images in that stack of notebooks and no way to see them without violating the practice that produced them. Meanwhile every new series starts from anxiety and a blank wall.
+
+**Wants:** capture in under 15 seconds—dictate the pages while making coffee, or photograph them. Then, later, *provocations* rather than summaries: "you've drawn the same doorway four times this month," "these two notes from different years want to be the same piece." Oblique Strategies generated from her own subconscious. Prompts for the next body of work.
+
+**Quits if:** the output sounds like a manager or a therapist. Also if it *summarizes*—paraphrase kills the material. The value is in the collision of her own fragments, not a tidy account of them.
+
+**The tension worth designing for:** morning pages work *because* you don't reread them. An agent that reads them back the same morning breaks the practice—the pages stop being a dump and start being performance for an audience. This argues for an embargo: dreams sourced from morning pages surface on a deliberate lag of weeks or months, never same-day. That falls out of cron triggers and event sourcing for free, and it makes Maya the purest test of the PRD's ritual technology claim: her success metric *is* the headline metric.
 
 ## Elena — 52, independent consultant / writer
 
@@ -70,16 +84,20 @@ Companion to [PRD.md](./PRD.md). Five personas, ordered by how well Milestone 1 
 
 ## Implications for the product
 
-**Cold start is a bigger problem than the PRD accounts for.** Four of five personas arrive with a corpus that is not an Obsidian vault: ChatGPT threads, PDFs, 20 years of email and manuscripts, call notes and decks. "Dreams are about *you*" requires material. Import breadth is a cold-start solution, not a convenience feature—and only Obsidian import is currently in the requirements list.
+**Cold start is a bigger problem than the PRD accounts for.** Four of six personas arrive with a corpus that is not an Obsidian vault: ChatGPT threads, PDFs, 20 years of email and manuscripts, call notes and decks. Maya arrives with no digital corpus at all—hers is generated daily by the product itself, which is the one case where the cold start solves itself if capture is fast enough. "Dreams are about *you*" requires material. Import breadth is a cold-start solution, not a convenience feature—and only Obsidian import is currently in the requirements list.
 
 **Contradiction is a missing dream type.** Devon and Sam live or die on *change over time* and *disconfirmation*, not retrieval. Lens re-runs already produce the raw material—an old answer beside a new one—but the PRD frames re-runs passively, as "watch an answer evolve." For these two it needs to be assertive: *this belief is now weaker than it was.*
 
 **Encryption and single-player have a commercial justification, not just an ideological one.** Devon's candid notes on founders and partners, and Sam's strategy reasoning, are the cases where privacy is a precondition of adoption rather than a value statement.
 
-**Measure the headline metric on Marcus.** "The ritual survives to week 4" is only meaningful for someone who would otherwise churn. The sovereignty-motivated user stays regardless of dream quality; Priya and Elena can't reach week 4 on a filesystem UI. Marcus is the honest signal.
+**Dreams need registers, not one voice.** Marcus needs verifiable citations and will quit over a hallucinated source. Maya needs oblique provocation and will quit over a tidy summary. Same generator, opposite failure modes. Dream type should carry a register, and the review signal should be able to teach it—"less like a report, more like a prompt" is exactly the kind of semantic-level feedback the Loop already promises.
+
+**Some dreams should be embargoed.** Not all material wants same-day reflection. Morning pages specifically require distance to keep working. A per-source delay before dreams can draw on it is cheap given the event log, and it's the difference between augmenting Maya's practice and destroying it.
+
+**Measure the headline metric on Marcus and Maya.** "The ritual survives to week 4" is only meaningful for someone who would otherwise churn. The sovereignty-motivated user stays regardless of dream quality; Priya and Elena can't reach week 4 on a filesystem UI. Marcus is the honest signal for corpus-driven dreams, Maya for ritual-driven ones—she already has a daily practice, so the question is purely whether Subconscious makes it better or breaks it.
 
 **Personas map to milestones:**
 
 - Milestone 1 — Marcus
-- Milestone 2 — Priya, Sam
+- Milestone 2 — Priya, Sam, Maya (needs voice/quick capture)
 - Gated on import breadth — Elena, Devon
