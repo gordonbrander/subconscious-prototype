@@ -20,15 +20,15 @@ Companion to [PRD.md](./PRD.md). Six personas, ordered by how well Milestone 1 s
 
 **Why he's first:** existing vault, Linux comfort, local GPU, high tolerance for filesystem-as-UI, and an actual corpus for Milestone 1 to dream over. Also the most likely to file good issues.
 
-## Priya — 34, senior product manager at a mid-size SaaS company
+## Priya — 34, autodidact, senior product manager at a mid-size SaaS company
 
-**Setup:** MacBook Pro (work-managed), personal iPhone. Notion for work docs, Apple Notes for everything real, ~600 unorganized ChatGPT threads. Tried Obsidian for six weeks in 2023 and bounced. Pays for ChatGPT Plus out of pocket.
+**Setup:** MacBook Pro (work-managed), personal iPhone. Notion for work docs, Apple Notes for everything real, ~600 unorganized ChatGPT threads. Tried Obsidian for six weeks in 2023 and bounced. Has a Substack with 2000 readers. Pays for ChatGPT Plus out of pocket.
 
 **Day:** 6–8 hours of meetings, Slack, and docs. Thinks in the 20 minutes before bed and on Sunday mornings. Runs the same three questions constantly: *is this the right bet, what did we already learn about this, what am I not seeing.*
 
 **Pain:** re-derives the same conclusion every quarter because the reasoning lives in a Slack thread from March. Her best strategic thinking happens in ChatGPT and evaporates when the thread scrolls away.
 
-**Wants:** a morning brief before standup. "You concluded the opposite of this in April—here's the note." Lens re-runs on standing questions.
+**Wants:** a morning brief. "You concluded the opposite of this in April—here's the note." Lens re-runs on standing questions.
 
 **Quits if:** setup takes more than 10 minutes, or review is a terminal/vim thing. Needs mobile. Milestone 2, not Milestone 1.
 
