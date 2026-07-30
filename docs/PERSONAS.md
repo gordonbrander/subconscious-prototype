@@ -38,11 +38,14 @@ Companion to [PRD.md](./PRD.md). Six personas, ordered by how well Milestone 1 s
 
 **Day:** morning pages first thing—three pages, six years on and off. Studio in the afternoon if teaching allows. Ideas arrive on walks and in the shower and are lost within the hour.
 
-**Pain:** the morning pages are a dumping ground she never rereads. So the obsessions inside them are invisible to her. She knows there are four years of recurring images in that stack of notebooks and no way to see.
+**Pains:** the morning pages are a dumping ground she never rereads. So the obsessions inside them are invisible to her. She knows there are four years of recurring images in that stack of notebooks and no way to see.
 
-**Wants:** capture in under 15 seconds—dictate the pages while making coffee, or photograph them. Then, later, *provocations* rather than summaries: "you've drawn the same doorway four times this month," "these two notes from different years want to be the same piece." Oblique Strategies generated from her own subconscious. Prompts for the next body of work.
+**Wants:**
+- Capture in under 15 seconds—dictate the pages while making coffee, or photograph them.
+- Oblique Strategies generated from her own Subconscious. *Provocations* rather than summaries: "you've drawn the same doorway four times this month," "these two notes from different years want to be the same piece."
+- Artist date suggestions
 
-**Quits if:** the output sounds "AI". The value is in the collision of her own fragments, seeing her own voice reflected back.
+**Quits if:** the output "sounds AI". The value is in the collision of her own fragments, seeing her own voice reflected back.
 
 **The tension worth designing for:** morning pages work *because* you don't reread them. An agent that reads them back the same morning breaks the practice—the pages stop being a dump and start being performance for an audience. This argues for an embargo: dreams sourced from morning pages surface on a deliberate lag of weeks or months, never same-day. That falls out of cron triggers and event sourcing for free, and it makes Maya the purest test of the PRD's ritual technology claim: her success metric *is* the headline metric.
 
