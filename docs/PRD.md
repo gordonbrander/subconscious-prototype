@@ -46,7 +46,11 @@ Subconscious is Zettelkasten one meta-layer up. The classic Zettelkasten loop wo
 - P2P or "full" decentralization: Decentralization is hard. Our primary goal is credible exit through user-owned data. CAL grants both source code and access to personal data, preventing lock-in. This is sufficient for our goals. 
 
 ## Users and use-cases
-<!-- Who uses this? Primary personas and their key jobs-to-be-done. -->
+
+- Knowledge workers: amplify your insights, creativity, strategy, and workflows
+- Students: see themes emerge from the bottom-up from your study notes and collected papers
+- Artists and writers: generate creative breakthroughs, see long-running threads you're following surfaced back to you.
+- Founders and investors: monitor live signals, refine your theses
 
 ## Requirements
 
