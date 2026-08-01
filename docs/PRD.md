@@ -171,69 +171,60 @@ A **tour** is a dream type: a generated narrative walk through notes you already
 
 ### Views
 
-- Home (reflection)
-    - Dreams
-      - Add to hand
-    - AI chat box
-- Hand (HUD)
-    - A HUD you can pull up from anywhere
-    - Collection of notes you've temporarily stashed
-    - Daily note
-- Chat (day agent)
-  - Conversation with day agent
-  - Hop into conversation with night agent to steer
-  - Query -> synthesize notes
+- FRE
+  - Journey: first-run
+  - Story: as a first-time user, I want my Subconscious to learn about me so it can customize itself to me.
+  - Short wizard
+  - Select "interest" tokens to construct a user archetype
+- Home
+  - Journey: reflection
+  - Story: as a user I want to see themes and insights reflected back to me from my Subconscious.
+  - Goal: close feedback loop between myself and my Subconscious
+  - Dreams: stack of stories generated from your Subconscious
+    - Once per day?
+    - Dreams types
+      - AI-generated notes
+      - Updates (e.g. OTD resurfaced notes)
+      - Prompts to user (e.g. multiple choice, or text input)
+      - Tours: a narrative walk through notes you already have
+      - Lens re-runs: an old question, re-answered, citing its previous answer
+    - **Set an intention**: influence what shows up next time by setting an intention
+    - Swipe through dreams
+      - One at a time, so you can turn your full attention to each dream
+      - Signal: e.g. Tinder swipe or similar more/less signal 
+      - Choices shuffle in new dreams
+    - Save dream -> note
+    - Add dream to your hand
+  - AI chat box
+- Hand (scratch)
+  - A HUD you can pull up from anywhere
+  - Story (quick capture): As a user, I want a scratch space where I can jot down quick thoughts or compare multiple notes.
+  - Story (synthesize): When I've gathered a few notes that feel related, I want to hand them to my Subconscious and have it generate something new out of the combination.
+    - Goal: explore adjacent possible, combinatorial innovation
+  - Hand: Collection of notes you've temporarily stashed
   - Generate new dream from contents of your hand
+  - Daily note
+  - Recent notes
+  - Tabs
+- Chat
+  - Goal: chat with your Subconscious
+  - Story (query): as a user, I want to be able to ask questions of my Subconscious, and get grounded answers.
+  - Story (rubber duck): as a user, I want to be able to think through a problem with my Subconscious.
+  - Story (steering): as a user, I want to be able to steer my background agents.
+  - Conversation grounded in notes
+  - Generate TLDRs, summaries, and reports
+  - Steer night agents
 - Quick capture
-  - Possibly part of your hand
-  - Voice
-- Wiki
-  - Note
-- Agent status (night agents)
-- Notifications
-- Plugins
-
-### User journeys
-
-Reflection (home view):
-- Goal: close feedback loop with user
-- JTBD: When I've been accumulating notes and conversations faster than I can make sense of them, I want to be shown what my Subconscious noticed—one dream at a time, in my own words—so I can react to each one and teach it what's worth noticing next.
-- **Dreams** are surfaced
-  - Once per day?
-  - Dreams types
-    - AI-generated notes
-    - Updates (e.g. OTD resurfaced notes)
-    - Prompts to user (e.g. multiple choice, or text input)
-    - Tours: a narrative walk through notes you already have
-    - Lens re-runs: an old question, re-answered, citing its previous answer
-- **Set an intention**: influence what shows up next time by setting an intention
-- Swipe through dreams
-  - One at a time, so you can turn your full attention to each dream
-  - Signal: e.g. Tinder swipe or similar more/less signal 
-    - Choices shuffle in new dreams
-  - Save dream -> note
-  - Add dream to your hand
-
-Synthesize:
-- Goal: explore adjacent possible, combinatorial innovation
-- JTBD: When I've gathered a few notes that feel related but I can't articulate the connection, I want to hand them to my Subconscious and have it generate something new out of the combination, so I can find the idea sitting between them.
-- Generate new dream from contents of your hand
-
-Conversation:
-- Goal: talk with your Subconscious
-- JTBD: When I'm chasing a thought that only makes sense against everything I've already written, I want to talk it through with an agent that has read all of it, so I can reach an answer grounded in my own material instead of starting from scratch.
-- Conversation grounded in notes
-- Generate TLDRs, summaries, and reports
-- Steer night agents
-
-Quick capture:
-- Goal: capture as fast as possible, organize later
-- JTBD: When a thought arrives while I'm in the middle of something else, I want to get it into the vault in seconds without titling or filing it, so I can keep my attention on what I was doing and trust that it will be organized later.
-- Write note (could just use AI input field)
+  - Goal: capture as fast as possible, organize later
+  - Story: When a thought arrives while I'm in the middle of something else, I want to get it into the vault in seconds without titling or filing it, so I can keep my attention on what I was doing and trust that it will be organized later.
   - Title optional (either generated or not required)
   - Autotag?
-- Capture URL
-- Voice memo
+  - Capture URL
+  - Voice memo
+- Wiki
+- Agent status
+- Notifications
+- Plugins
 
 ## Technical specs
 
@@ -256,6 +247,20 @@ Prototype approach:
   - Track causality (automatically assign `prev` ID to event based on current HEAD at write time).
     - Allows deterministic conflict resolution when merging event logs
   - **Commands** (unicast requests / "please do x") and **events** (multicast facts / "x happend")
+- Named queues (backed by DB table)
+  - FIFO
+  - Queryable
+  - At-least-once delivery
+  - SQS-style timeout lease system
+- LLM wiki
+  - Versioned JSON
+  - CouchDB-like version/conflict resolution semantics
+  - Optimistic concurrency
+  - Read-before-write guard for client<->server synce
+    - Forces agents to read and merge conflicts
+- Content-addressed store
+  - Structural sharing between fat events and projections
+    - E.g. `content` field is a cid in event and in wiki entry
 - Agents as actors
   - Actor-like system built on top of event sourced log
     - Messages are a type of command
