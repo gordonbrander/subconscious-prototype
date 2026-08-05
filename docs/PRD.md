@@ -126,7 +126,7 @@ Subconscious is Zettelkasten one meta-layer up. The classic Zettelkasten loop wo
 - **Outputs**
   - Send an email
   - Post to Telegram
-- **Workflows**
+- **Automations**
   - Queue with workflow attached
 - **Cron jobs**
 - **Import/export**
