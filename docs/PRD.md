@@ -81,6 +81,8 @@ Subconscious is Zettelkasten one meta-layer up. The classic Zettelkasten loop wo
     - Support subset of Obsidian-flavored Markdown
     - Wikilinks: use Obsidian resolution algorithm.
     - Block references: use Obsidian-style.
+  - (P1) Tables (CSV)
+  - (P1) Airtable-style "foreign key" links
   - (P1) Quick capture
   - (P1) Plain-text search
 - (P1) **Provenance**
@@ -108,8 +110,11 @@ Subconscious is Zettelkasten one meta-layer up. The classic Zettelkasten loop wo
 - **Tools**
   - (P1) Edit note
   - (P1) Search notes
+    - Backlinks
   - (P1) Search messages
   - (P1) Search web
+  - (P1) Spreadsheet tool (quantitative queries over CSV)
+    - Implement with in-memory SQLite?
 - **Event system**
   - (P2): event sourced architecture
   - (P1) Path-based event subscriptions
